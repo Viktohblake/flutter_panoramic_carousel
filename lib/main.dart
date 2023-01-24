@@ -7,10 +7,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Text('Paranomic Carousel'),
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(child: Text('Paranomic Carousel')),
+      ),
     );
   }
 }
