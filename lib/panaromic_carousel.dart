@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -10,11 +12,26 @@ class PanaromicCarousel extends StatefulWidget {
 
 class _PanaromicCarouselState extends State<PanaromicCarousel> {
   late final PageController pageController;
-  late final pageValue = 0;
+  int pageValue = 0;
+
+  late final Timer carouselTimer;
+
+  Timer getTime() {
+    return Timer.periodic(Duration(seconds: 3), (timer) {
+      if (pageValue == 4) {
+        pageValue = 0;
+      }
+      pageController.animateToPage(pageValue,
+          duration: Duration(seconds: 2), curve: Curves.easeInCirc);
+
+      pageValue++;
+    });
+  }
 
   @override
   void initState() {
     pageController = PageController(initialPage: 0, viewportFraction: 0.5);
+    carouselTimer = getTime();
     super.initState();
   }
 
@@ -27,6 +44,7 @@ class _PanaromicCarouselState extends State<PanaromicCarousel> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black87,
       // appBar: AppBar(
       //   title: Text('Paranomic Carousel'),
       // ),
@@ -40,6 +58,10 @@ class _PanaromicCarouselState extends State<PanaromicCarousel> {
             }),
             child: PageView.builder(
               controller: pageController,
+              onPageChanged: (index) {
+                pageValue = index;
+                setState(() {});
+              },
               itemBuilder: (_, index) {
                 return AnimatedBuilder(
                   animation: pageController,
@@ -56,12 +78,22 @@ class _PanaromicCarouselState extends State<PanaromicCarousel> {
             ),
           ),
         ),
+        SizedBox(
+          height: 12,
+        ),
         Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(
                 5,
-                (index) => Icon(
-                      Icons.circle,
-                      size: 10,
+                (index) => Container(
+                      margin: EdgeInsets.only(top: 15),
+                      child: Icon(
+                        Icons.circle,
+                        size: 12,
+                        color: pageValue == index
+                            ? Colors.white
+                            : Colors.grey.shade800,
+                      ),
                     )))
       ]),
     );
