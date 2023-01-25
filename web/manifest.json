@@ -1,6 +1,6 @@
 {
-    "name": "paranomic_carousel",
-    "short_name": "paranomic_carousel",
+    "name": "panaromic_carousel",
+    "short_name": "panaromic_carousel",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

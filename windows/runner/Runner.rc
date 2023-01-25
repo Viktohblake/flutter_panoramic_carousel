@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "paranomic_carousel" "\0"
+            VALUE "FileDescription", "panaromic_carousel" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "paranomic_carousel" "\0"
+            VALUE "InternalName", "panaromic_carousel" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "paranomic_carousel.exe" "\0"
-            VALUE "ProductName", "paranomic_carousel" "\0"
+            VALUE "OriginalFilename", "panaromic_carousel.exe" "\0"
+            VALUE "ProductName", "panaromic_carousel" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
