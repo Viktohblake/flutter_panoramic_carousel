@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:paranomic_carousel/panaromic_carousel_indicator.dart';
 
 class ParanomicCarousel extends StatefulWidget {
   const ParanomicCarousel({super.key});
@@ -10,10 +11,11 @@ class ParanomicCarousel extends StatefulWidget {
 
 class _ParanomicCarouselState extends State<ParanomicCarousel> {
   late final PageController pageController;
+  late final pageValue = 0;
 
   @override
   void initState() {
-    pageController = PageController(initialPage: 0, viewportFraction: 0.85);
+    pageController = PageController(initialPage: 0, viewportFraction: 0.5);
     super.initState();
   }
 
@@ -26,9 +28,12 @@ class _ParanomicCarouselState extends State<ParanomicCarousel> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(children: [
+      // appBar: AppBar(
+      //   title: Text('Paranomic Carousel'),
+      // ),
+      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         SizedBox(
-          height: 200,
+          height: 300,
           child: ScrollConfiguration(
             behavior: ScrollConfiguration.of(context).copyWith(dragDevices: {
               PointerDeviceKind.touch,
@@ -43,7 +48,7 @@ class _ParanomicCarouselState extends State<ParanomicCarousel> {
                     return child!;
                   },
                   child: Container(
-                    margin: EdgeInsets.only(top: 20, left: 8, right: 8),
+                    margin: EdgeInsets.only(left: 8, right: 8),
                     color: Colors.amberAccent,
                   ),
                 );
@@ -51,7 +56,14 @@ class _ParanomicCarouselState extends State<ParanomicCarousel> {
               itemCount: 5,
             ),
           ),
-        )
+        ),
+        Row(
+            children: List.generate(
+                5,
+                (index) => Icon(
+                      Icons.circle,
+                      size: 10,
+                    )))
       ]),
     );
   }
