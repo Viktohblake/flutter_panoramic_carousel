@@ -1,4 +1,4 @@
-# paranomic_carousel
+# panaromic_carousel
 
 A new Flutter project.
 

@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class ParanomicCarouselIndicator extends StatefulWidget {
-  const ParanomicCarouselIndicator({super.key});
+class PanaromicCarouselIndicator extends StatefulWidget {
+  const PanaromicCarouselIndicator({super.key});
 
   @override
-  State<ParanomicCarouselIndicator> createState() =>
-      _ParanomicCarouselIndicatorState();
+  State<PanaromicCarouselIndicator> createState() =>
+      _PanaromicCarouselIndicatorState();
 }
 
-class _ParanomicCarouselIndicatorState
-    extends State<ParanomicCarouselIndicator> {
+class _PanaromicCarouselIndicatorState
+    extends State<PanaromicCarouselIndicator> {
   late final pageValue;
 
   @override

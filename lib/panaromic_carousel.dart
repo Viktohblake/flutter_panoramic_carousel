@@ -1,15 +1,14 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:paranomic_carousel/panaromic_carousel_indicator.dart';
 
-class ParanomicCarousel extends StatefulWidget {
-  const ParanomicCarousel({super.key});
+class PanaromicCarousel extends StatefulWidget {
+  const PanaromicCarousel({super.key});
 
   @override
-  State<ParanomicCarousel> createState() => _ParanomicCarouselState();
+  State<PanaromicCarousel> createState() => _PanaromicCarouselState();
 }
 
-class _ParanomicCarouselState extends State<ParanomicCarousel> {
+class _PanaromicCarouselState extends State<PanaromicCarousel> {
   late final PageController pageController;
   late final pageValue = 0;
 
