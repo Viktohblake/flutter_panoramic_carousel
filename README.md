@@ -1,16 +1,9 @@
-# panaromic_carousel
+# panoromic_carousel
 
-A new Flutter project.
+Inspired by https://panorama-slider.uiinitiative.com/
 
-## Getting Started
+This is something I've not seen done before in flutter.
 
-This project is a starting point for a Flutter application.
+I've taken it upon me to do it (Contributions are welcome).
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[Still in progress]
